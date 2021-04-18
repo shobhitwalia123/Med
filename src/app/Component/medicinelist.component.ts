@@ -43,7 +43,7 @@ export class MedicineListComponent {
   }
 
   navigate(id){
-    window.location.href = '/medicine?id='+ id;
+    window.location.href = '#/medicine?id='+ id;
   }
   
   public ngOnInit()
@@ -78,5 +78,10 @@ getDateDifference(date1){
   var startDate = moment(date1);
   var endDate = moment(new Date());
   return endDate.diff(startDate, 'days');
+}
+
+clearSearch(){
+  $("#searchinput").val('');
+  this.getMedicines();
 }
 }

@@ -1,2 +1,26 @@
 .expire_class {background-color: #faa8a5;}
 tr { cursor: pointer;}
+.outer {
+    width: 100%;
+    height: 50vh;
+    display: flex;
+  }
+  
+  .inner {
+    margin: auto;
+  }
+
+#searchinput {
+    width: 200px;
+}
+#searchclear {
+    position: absolute;
+    right: 5px;
+    top: 0;
+    bottom: 0;
+    height: 14px;
+    margin: auto;
+    font-size: 14px;
+    cursor: pointer;
+    color: #ccc;
+}

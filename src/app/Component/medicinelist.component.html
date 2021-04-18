@@ -6,14 +6,16 @@
       Add Medicine
     </button>
   </div>
-  <div style="float: right; margin-bottom: 5px; margin-right: 10px">
+  <div style="float: right; margin-bottom: 5px; margin-right: 10px" class="btn-group">
     <input
       type="text"
+      id="searchinput"
       placeholder="Search"
       #medicineName
       (change)="search(medicineName.value)"
       class="form-control"
     />
+    <span id="searchclear" class=" fa fa-times" (click)="clearSearch()"></span>
   </div>
   <div
     *ngIf="filteredMedicine.length > 0"
@@ -41,7 +43,10 @@
       </tr>
     </table>
   </div>
-  <div *ngIf="filteredMedicine.length == 0">No Data Found</div>
+  <div *ngIf="filteredMedicine.length == 0" class="outer">
+    <div class="alert alert-danger inner" role="alert">
+    No Record Found
+  </div></div>
 </div>
 <div>
   <!-- The Modal -->
